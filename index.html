@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tablón de ofertas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="board-header">
+  <h1>Tablón de ofertas <span class="pin-icon" aria-hidden="true">📌</span></h1>
+  <p class="subtitle">Comedores, extraescolares, tiendas y cuidado de niños — Elche · San Vicente · Alicante</p>
+</header>
+
+<div class="controls">
+  <label for="filtro">Mostrar</label>
+  <select id="filtro">
+    <option value="since_last">Nuevas desde tu última visita</option>
+    <option value="today">De hoy</option>
+    <option value="week">Última semana</option>
+    <option value="month">Último mes</option>
+    <option value="all">Todas</option>
+  </select>
+  <span id="contador" class="contador"></span>
+</div>
+
+<main id="tablon" class="tablon" aria-live="polite">
+  <p class="cargando">Cargando ofertas…</p>
+</main>
+
+<template id="tarjeta-template">
+  <article class="tarjeta">
+    <span class="chincheta" aria-hidden="true"></span>
+    <span class="badge-nuevo">Nuevo</span>
+    <h2 class="tarjeta-titulo"></h2>
+    <p class="tarjeta-meta"></p>
+    <p class="tarjeta-desc"></p>
+    <div class="tarjeta-acciones">
+      <a class="btn-ver" target="_blank" rel="noopener">Ver oferta</a>
+      <button class="btn-descartar" type="button">Descartar</button>
+    </div>
+  </article>
+</template>
+
+<footer class="board-footer">
+  <p>Se actualiza sola cada día. Última actualización de datos: <span id="fecha-datos">—</span></p>
+</footer>
+
+<!-- Firebase (para recordar tu última visita y las ofertas descartadas entre dispositivos) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
