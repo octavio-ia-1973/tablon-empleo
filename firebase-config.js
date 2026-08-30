@@ -3,10 +3,10 @@
 // Estas claves son públicas por diseño en apps web de Firebase; la protección real
 // la dan las reglas de seguridad de Firestore (ver README.md).
 const FIREBASE_CONFIG = {
-  apiKey: "PON_AQUI_TU_API_KEY",
-  authDomain: "PON_AQUI_TU_PROYECTO.firebaseapp.com",
-  projectId: "PON_AQUI_TU_PROYECTO",
-  storageBucket: "PON_AQUI_TU_PROYECTO.appspot.com",
-  messagingSenderId: "PON_AQUI",
-  appId: "PON_AQUI",
+  apiKey: "AIzaSyDoO-AuhcKABSfwwVXhkFeVx0HXJrDuMM8",
+  authDomain: "tablon-empleo.firebaseapp.com",
+  projectId: "tablon-empleo",
+  storageBucket: "tablon-empleo.firebasestorage.app",
+  messagingSenderId: "455342139648",
+  appId: "1:455342139648:web:de810ca46b0435c50f2be5",
 };
